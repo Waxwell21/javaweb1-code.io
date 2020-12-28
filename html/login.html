@@ -1,0 +1,146 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>用户登陆</title>
+    <script src="../js/jquery-3.4.1.min.js"></script>
+
+    <!-- 表单验证部分1 -->
+    <script>
+        function myFunction() {
+            var x = document.forms["Form"]["Name"].value;
+            if (x = null || x == "") {
+                window.location.href = 'home page.html';
+                alert("请输入名字！！");
+                return false;
+            }
+
+        }
+    </script>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            position: relative;
+            height: 1000px;
+            width: 100%;
+            overflow: hidden;
+            background-color: #666;
+
+        }
+
+        span {
+            display: block;
+            opacity: 0.7;
+        }
+
+        .table1 {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -40%);
+            background-color: cadetblue;
+            border-radius: 3px;
+        }
+
+        .table1 .td1 {
+            padding: 15px;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+<form action="#" method="post" name="Form" onsubmit="return myFunction()">
+    <table class="table1">
+        <tr>
+            <td class="td1">用户名：</td>
+            <td><input id="username" name="Name" type="text"></td>
+        </tr>
+        <tr>
+            <td class="td1">密码</td>
+            <td><input id="number" name="password" type="password"></td>
+        </tr>
+        <tr>
+
+            <td><input id="login" onclick="go()" type="submit" value="提交"/></td>
+            <td><input type="reset" value="重置"></td>
+        </tr>
+    </table>
+</form>
+
+<!-- jquery动画效果 -->
+<script>
+    $(function () {
+        setInterval(function () {
+            var maxW = document.body.clientWidth,
+                maxH = document.body.clientHeight,
+                left = Math.random() * maxW,
+                bottom = left - (Math.random() - 0.5) * 0.2 * maxW, //保证落下的位置水平有变化，但不大
+                opacity = 0.7 + 0.3 * Math.random();
+            speed = 30;
+            size = 20 + 10 * Math.random(), //字体20-30
+                color = '#fff';
+            // num = Math.floor(Math.random() * 10) //产生0-9随机数，当然你们可以自己设置
+            num = '*';
+            var style = 'position:absolute;top:0px;font-size:' + size + 'px;color:' + color +
+                ';left:' + left + 'px;opacity:' + opacity;
+            var div = '<span class = "dd" style="' + style + '">' + num + '</span>'
+            $('body').append(div)
+            $('span').animate({
+                top: maxH,
+                left: bottom
+            }, 3000, function () {
+                $(this).remove() //这一步很关键，要把落下的去掉，不然会越积越多
+            });
+        }, 20) //20ms产生一个
+    })
+</script>
+
+<!-- 表单验证部分2 -->
+<script type="text/javascript">
+    var user = document.querySelector('#username');
+    var login = document.querySelector('#login');
+
+    if (getCookie('username')) {
+        user.value = getCookie('username');
+    }
+    login.onclick = function () {
+        setCookie('username', user.value, 5);
+    }
+
+
+    function setCookie(c_name, value, expiredays) {
+        var exdate = new Date();
+        exdate.setDate(exdate.getDate() + expiredays);
+        document.cookie = c_name + "=" + escape(value) + ((expiredays == null) ? "" : ";expires=" + exdate
+            .toGMTString());
+    }
+
+    function getCookie(key) {
+        var arr1 = document.cookie.split(';');
+        for (var i = 0; i < arr1.length; i++) {
+            var arr2 = arr1[i].split('=');
+            if (arr2[0] == key) {
+                return arr2[1];
+            }
+        }
+    }
+
+    function removeCookie(key) {
+        setCookie(key, '', -1);
+    }
+</script>
+
+<!--跳转页面 -->
+<script>
+</script>
+
+
+</body>
+
+</html>

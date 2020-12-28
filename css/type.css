@@ -1,0 +1,322 @@
+@charset "UTF-8";
+
+.div1 {
+    width: 830px;
+    height: 200px;
+    border: 1px black solid;
+    background-image: url(../images/wiki\ name.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-origin: content-box;
+    background-color: dimgrey;
+    position: relative;
+    left: 300px;
+    border: 1px black solid;
+}
+
+
+.div2 {
+
+    width: 160px;
+    height: 1000px;
+    border: 1px black solid;
+    float: left;
+    position: relative;
+    left: 300px;
+    background: #6c6669;
+}
+
+.div2 ul {
+    padding: 15px 0;
+    margin: 9;
+    list-style: none;
+    background: #6c6669;
+    color: #ffffff;
+    border-right-width: 0;
+}
+
+.div2 li {
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 12px;
+    cursor: pointer;
+    font-size: 14px;
+    position: relative;
+    cursor: pointer;
+}
+
+.div2 .active {
+    background-color: red;
+}
+
+.div3 {
+    width: 668px;
+    height: 1000px;
+    background-color: wheat;
+    border: 1px black solid;
+    float: left;
+    position: relative;
+    left: 300px;
+    overflow: scroll;
+}
+
+.div3::-webkit-scrollbar {
+    display: none;
+}
+
+.div3 .active {
+    display: block;
+}
+
+.div3 .wenben1 {
+    text-indent: 2em;
+    font-size: 15px;
+    font-family: "LiSu";
+    font-style: italic;
+
+
+}
+
+.div3 .wenben2 {
+    text-align: center;
+    background-color: wheat;
+    font-size: 20px;
+    font-family: "LiSu";
+    font-style: italic;
+    color: #6c6669;
+}
+
+.div3 .wenben3 {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "LiSu";
+    color: darkgreen;
+    font-style: italic;
+}
+
+.div3 ul {
+    padding: 0px 20px;
+    margin-right: -5px;
+    display: none;
+    list-style: none;
+
+}
+
+
+.div3 li {
+    list-style-type: none;
+}
+
+.div3 .litu {
+    float: left;
+    width: 206px;
+    height: 206px;
+    background-color: wheat;
+    margin-right: 5px;
+    margin-bottom: 5px;
+
+}
+
+
+.div3 .litu .bg {
+    width: 100%;
+    height: 150px;
+}
+
+.div3 .litu .bg .img1 {
+    height: 150px;
+    margin-left: 31px;
+}
+
+.litu .biaoqian {
+    text-align: center;
+}
+
+.litu .biaoqian1 {
+    text-indent: 3.75em;
+}
+
+.litu a {
+    color: darkgreen;
+    font-size: 20px;
+    text-decoration: none;
+
+}
+
+.div3 .tupian {
+    display: block;
+    margin: 0 auto;
+    width: 300px;
+}
+
+.div3 .clearfix:after {
+    display: block;
+    clear: both;
+    content: "";
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+}
+
+.div3 .clearfix {
+    zoom: 1;
+}
+
+
+.div4 {
+    width: 830px;
+    height: 40px;
+    border: 1px black solid;
+    background-color: black;
+    position: relative;
+    left: 300px;
+}
+
+.div4 .top-dc {
+    float: left;
+    position: relative;
+    left: 0;
+    width: 160px;
+    height: 40px;
+    background-color: black;
+    margin-right: 1px;
+}
+
+.top-dc .biaodan {
+    background-color: red;
+    float: left;
+    width: 32px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 0px;
+    margin-left: 10px;
+    margin-top: 10px;
+    border-radius: 3px;
+}
+
+.top-dc a {
+
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.top-nav {
+    float: left;
+    height: 40px;
+    line-height: 40px;
+    font-size: 0px;
+    margin-left: 2px;
+}
+
+.top-nav span {
+    font-size: 16px;
+    color: darkgoldenrod;
+    font-family: sans-serif;
+    margin: 0.5em;
+}
+
+.top-nav a {
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.top-nav a:hover {
+    color: chocolate;
+}
+
+.top-info {
+    float: right;
+    width: 250px;
+    height: 30px;
+    margin-top: 5px;
+    background-color: floralwhite;
+}
+
+.top-info .search-from {
+    position: relative;
+    display: block;
+    width: 250px;
+    height: 30px;
+    background-color: black;
+}
+
+.top-info .search-from .search-text1 {
+    position: absolute;
+    top: 0px;
+    right: 52px;
+    display: block;
+    width: 140px;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid rosybrown;
+    outline: 0;
+    border-radius: 4px 0 0 4px;
+}
+
+.top-info .search-from .search-text1:hover {
+    width: 180px;
+}
+
+.top-info .search-from .search-btn {
+    position: absolute;
+    top: 0px;
+    right: 2px;
+    display: block;
+    width: 50px;
+    height: 34px;
+    border: 1px solid rosybrown;
+    font-size: 20px;
+    line-height: 20px;
+    background-color: rosybrown;
+    color: silver;
+    outline: 0;
+    border-radius: 0 4px 4px 0;
+}
+
+.top-info .search-from .search-btn:hover {
+    background-color: skyblue;
+    color: wheat;
+
+}
+
+.div5 {
+    width: 160px;
+    height: 300px;
+    margin-top: 0;
+    margin-left: 0;
+    background: #6c6669;
+    background-image: url(../images/timg.jpeg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-origin: content-box;
+
+}
+
+.div6 {
+    width: 160px;
+    height: 300px;
+    margin-top: 0;
+    margin-left: 0;
+    background: #6c6669;
+    background-image: url(../images/background04.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-origin: content-box;
+
+}
+
+
+.body0 {
+    background-image: url(../images/body-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.body1 {
+    background-image: url(../images/Autumn_RoG_poster.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
